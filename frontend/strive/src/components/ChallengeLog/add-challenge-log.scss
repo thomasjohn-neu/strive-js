@@ -1,0 +1,73 @@
+.add-log {
+    width: 600px;
+    border-radius: 10px;
+    position: absolute;
+    display: block;
+    position: fixed;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--body_background) !important;
+    color:var(--body_color) !important;
+    padding: 20px;
+    max-height: 600px;
+    overflow-y: auto;
+    z-index: 999;
+}
+.close-button {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    color: #999;
+    cursor: pointer;
+  }
+  
+.close-button:hover {
+    color: #000;
+}
+.challengelog-save {
+    width: 100%;
+}
+.reminder-btn {
+    margin-top: 10px;
+    background-color: #7D7D7D;
+    border-radius: 10px;
+}
+.add-new-log-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.challenge-labels {
+    margin-left: 0px;
+    div {
+        color: #a6a1a1;    
+        font-size: 15px;
+    }
+}
+.challenge-values {
+    margin-left: 0px;
+    div {
+        font-size: 17px;    
+    }
+}
+
+.go4109123758 {
+    top: 100px !important;
+}
+.header-add-log {
+    
+}
+.fieldLabel-input-reqd:after {
+    content: " *";
+    color: red;
+  }

@@ -1,0 +1,29 @@
+.slide-container {
+    position: relative;
+}
+.expand {
+    position: absolute;
+    border: none;
+    background: none;
+    right: 100%;
+}
+.expand > svg {
+    transform: rotate(90deg);
+}
+.collapse {
+    position: absolute;
+    border: none;
+    background: none;
+    right: 0;
+}
+.collapse > svg {
+    transform: rotate(90deg);
+}
+.slide {
+    right: -100%;
+    transition: transform 0.5s ease;
+}
+  
+.slide.visible {
+    right: 0;
+}

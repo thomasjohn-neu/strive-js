@@ -1,0 +1,82 @@
+edit-button{
+    margin-left: 140px;
+}
+.formChallenge{
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    background-color: var(--body_background) !important;
+    padding: 45px;
+    margin-left: 25%;
+    margin-bottom: 75px;
+    border: 1px solid;
+    border-color:var(--body_color) !important;
+}
+
+.inputMargin{
+    margin-bottom: 15px;
+}
+
+.newChallenge{
+    margin-left: 20px;
+    // margin-bottom: 20px;
+    margin-right:10px;
+}
+
+.p-dataview-header, .surface-card{
+    background-color: var(--body_background) !important;
+}
+
+.content{
+    background-color: var(--body_background) !important;
+    color:var(--body_color) !important;
+}
+
+.align-right{
+    justify-self: flex-end;
+}
+
+.btn-custom{
+    margin-right:10px;
+}
+
+.description{
+    height: 75px;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+.surface-card{
+    margin-bottom: 5%;
+}
+
+.align-between{
+    justify-content: space-between;
+}
+
+.card-bottom{
+    margin-bottom: 50px;
+}
+
+.btn-right{
+    float:right;
+    margin-left: 20px;
+    margin-right: 12px;
+}
+
+.card{
+    margin-right: 20px;
+}
+
+.margin-right{
+    margin-right: 10px;
+}
+
+.contentLayout .backgroundBlack{
+    background-color: var(--body_background) !important;
+    color:var(--body_color) !important;
+}
+
+.p-dataview .p-dataview-header{
+    border: 0px !important;
+}

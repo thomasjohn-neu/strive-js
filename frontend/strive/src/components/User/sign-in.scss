@@ -1,0 +1,70 @@
+.signInput{
+    margin: 0;
+    box-shadow: none;
+    height: 2.6em;
+    border: 0;
+    border-radius: 6px;
+    border-color: transparent;
+    font-size: 17px;
+    line-height: 1.23536;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    width: 100%;
+    height: 3.29412rem;
+    margin-bottom:10px;
+}
+.signlabel{
+    margin: 0;
+    box-shadow: none;
+    height: 2.6em;
+    border: 0;
+    border-radius: 6px;
+    border-color: transparent;
+    font-size: 17px;
+    line-height: 1.23536;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    width: 100%;
+    height: 28px;
+    color:#fff;
+    background: #2D2D2D;
+    margin-bottom: 10px;
+}
+.signinBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1F1F1F;
+}
+.signInButton {
+    max-width: 240px;
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    padding: 0px 16px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7D7D7D;
+}
+.signInForm {
+    width: 100%;
+    max-width: 700px;
+    max-height: 560px;
+    border-radius: 10px;
+    background: #2D2D2D;
+    padding: 45px;
+    margin-top: 10%;
+}
+.LogoHead{
+    background-color: #2D2D2D;
+    color:#fff;
+    text-align: center;
+}

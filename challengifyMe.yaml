@@ -1,0 +1,451 @@
+openapi: 3.0.3
+info:
+  title: Challenge Portal API
+  version: 1.0.0
+  description: A platform designed to help you accomplish your study goals, maintain a healthy lifestyle, and stay motivated among your circle of friends or in private.
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 123
+        username:
+          type: string
+          example: john_doe
+        email:
+          type: string
+          format: email
+          example: john_doe@example.com
+        password:
+          type: string
+          example: password123
+      required:
+        - username
+        - email
+        - password
+    Challenge:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 456
+        title:
+          type: string
+          example: Drink 8 Glasses of Water a Day
+        description:
+          type: string
+          example: "Challenge yourself to drink at least 8 glasses of water a day."
+        category:
+          type: string
+          enum: [study, lifestyle, health]
+          example: health
+        privacy:
+          type: string
+          enum: [public, private]
+          example: public
+        start_date:
+          type: string
+          format: date-time
+          example: 2023-04-01T00:00:00Z
+        end_date:
+          type: string
+          format: date-time
+          example: 2023-04-30T23:59:59Z
+        goal:
+          type: integer
+          example: 56
+        unit:
+          type: string
+          example: glasses
+        group_id:
+          type: integer
+          example: 789
+        user_id:
+          type: integer
+          example: 123
+      required:
+        - title
+        - category
+        - privacy
+        - start_date
+        - end_date
+        - goal
+        - unit
+        - user_id
+    Group:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 789
+        name:
+          type: string
+          example: Challenge Buddies
+        description:
+          type: string
+          example: A group of friends challenging each other to achieve their goals.
+        privacy:
+          type: string
+          enum: [public, private]
+          example: public
+        max_members:
+          type: integer
+          example: 10
+        admin_id:
+          type: integer
+          example: 123
+      required:
+        - name
+        - privacy
+        - max_members
+        - admin_id
+    ChallengeLogs:
+      type: object
+      properties:
+        user_id:
+          type: integer
+          example: 456
+        challenge_id:
+          type: integer
+          example: 56
+        description:
+          type: string
+          example: "This description contains the status of the challenge completion wrt to the user_id based on the details mentioned for the challenge"
+        isPrivate:
+          type: boolean
+          example: true
+        createdBy:
+          type: integer
+          example: 56
+        createdDate:
+          type: string
+          example: Mar 23,2023
+      required:
+        - user_id
+        - challenge_id
+        - description
+        - isPrivate
+        - createdBy
+        - createdDate
+
+    
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+paths:
+  /api/auth/signup:
+    post:
+      summary: Register a new user
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: User registered successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Invalid request body
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid request
+      tags:
+        - Authentication
+
+
+  /api/auth/login:
+    post:
+      summary: Login the user
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: User Logged-in succesfully
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Wrong Username or Password
+      tags:
+        - Authentication
+
+
+  /api/challenges:
+    post:
+      summary: Creates new Challenge
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Challenge'
+      responses:
+        '200':
+          description: Challenge created succesfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Challenge'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid request
+      tags:
+        - Challenges
+
+  /api/challenges/{challenge_id}:
+    parameters:
+      in: path
+      name: challenge_id
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: Gets challenges associated with the userId
+      responses:
+        '200':
+          description: Challenges retrieved succesfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Challenge'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid request
+      tags:
+        - Challenges
+
+
+    put:
+      summary: updates challenge based on the challengeId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Challenge'
+      responses:
+        '200':
+          description: Challenges updated succesfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Challenge'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid request
+      tags:
+        - Challenges
+
+
+    delete:
+      summary: Deletes the Challenge
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Challenge'
+      responses:
+        '200':
+          description: Challenges deleted succesfully
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid request
+      tags:
+        - Challenges
+
+
+  /api/challengesLog:
+    post:
+      summary: Logs the information about the challenge and the associated user
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChallengeLogs'
+      responses:
+        '200':
+          description: Challenge created succesfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChallengeLogs'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid request
+      tags:
+        - Challenge Logs
+
+  /api/challengesLog/{challenge_id}:
+    parameters:
+      in: path
+      name: challenge_id
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: Gets logs of challenges associated with the userId / ownerId / challengeId
+      responses:
+        '200':
+          description: Challenges retrieved succesfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChallengeLogs'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid request
+      tags:
+        - Challenge Logs
+
+
+    put:
+      summary: updates challenge based on the challengeId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChallengeLogs'
+      responses:
+        '200':
+          description: Challenges updated succesfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChallengeLogs'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid request
+      tags:
+        - Challenge Logs
+
+
+    delete:
+      summary: Deletes the Challenge
+      responses:
+        '200':
+          description: Challenges deleted succesfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChallengeLogs'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid request
+      tags:
+        - Challenge Logs
+        
+        
+  /api/dashboard:
+    get:
+      summary: Gives the dashboard metrics
+      responses:
+        '200':
+          description: Dashboard retrieved succesfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChallengeLogs'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid request
+      tags:
+        - Dashboard
+  
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/thomasjohn-neu/signup/1.0.0

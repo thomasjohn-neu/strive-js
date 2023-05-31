@@ -1,0 +1,107 @@
+#p1 {
+    width: 50%;
+    max-width: 650px;
+    height: 50%;
+    border-radius: 10px;
+    background: #2D2D2D;
+    padding: 15px 20px 0px 20px;
+    margin: 0px 30px 30px 30px;
+}
+#p1 .p-toggleable-content {
+    max-height: 180px;
+}
+#p1 .p-panel-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#p2 {
+    font-size: 14px;
+    width: 50%;
+    border-radius: 10px;
+    background: #2D2D2D;
+    padding: 15px 20px 0px 20px;
+    margin: 0px 30px 30px 30px;
+}    
+#p2 .p-panel-header {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+#p2 .inputMargin{
+    margin-right: 4px;
+}
+#p2 .p-toggleable-content {
+    max-height: 250px;
+}
+
+.pomodoroDiv {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 100px;
+}
+
+.p-panel .p-panel-header, .p-panel .p-panel-content, .p-toggleable-content, .p-card-body{
+    background: #2D2D2D;
+    font-size: 15px;
+    color:#fff;
+}
+.submit {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.submit button {
+    color: #fff;
+    border: 2px solid #000000;
+    background-color: #7D7D7D !important;
+    border-color: #7D7D7D !important;
+    border-radius: 4px;
+    margin-right: 5px
+}
+.p-card-body{
+    text-align: center;
+}
+.p-card-content{
+    display: flex; /* set display to flex to allow centering */
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+}
+
+.p-component svg{
+    width: 125px;
+    height: 125px;
+}
+.p-knob-value {
+    stroke: var(--primary-color, rgb(96, 95, 95));
+}
+.p-knob-text {
+    fill: var(--text-color-secondary, white);
+    color: white;
+}
+
+.selectForm{
+    display: block;
+    width: 100%;
+    padding: 1px 1px 1px 1px;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 12px;
+    font-weight: 400;
+    color: #212529;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    appearance: none;
+    margin: 10px 0px;
+}
+
+.text-align {
+    text-align: center;
+    margin-bottom:5px;
+}

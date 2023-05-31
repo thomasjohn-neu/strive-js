@@ -1,0 +1,28 @@
+.p-panel{
+    width: 100%;
+    max-width: 650px;
+    max-height: 1000px;
+    border-radius: 10px;
+    background-color: var(--body_background) !important;
+    padding: 45px;
+    margin: 0px 50px 50px 50px;
+}
+
+.p-panel .p-panel-header, .p-panel .p-panel-content, .p-toggleable-content, .p-card-body{
+    background-color: var(--body_background) !important;
+    color:var(--body_color) !important;
+}
+
+.p-card-body{
+    text-align: center;
+}
+.p-card-content{
+    display: flex; /* set display to flex to allow centering */
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+}
+
+.p-component svg{
+    width: 200px;
+    height: 200px;
+}

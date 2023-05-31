@@ -1,0 +1,28 @@
+.calender-parent {
+
+}
+.fc-toolbar-title {
+    font-size: 18px !important;
+}
+.fc-col-header-cell-cushion {
+    font-size: 14px;
+}
+
+.fc.fc-theme-standard .fc-view-harness th, .fc.fc-theme-standard .fc-view-harness .fc-view, .fc.fc-theme-standard .fc-view-harness td{
+    // background-color: #1F1F1F !important;
+    // color: #A6A1A1  !important;
+    background-color: var(--body_background) !important;
+    color:var(--body_color) !important;
+}
+
+a{
+    color:var(--body_color) !important;
+}
+
+.fc.fc-theme-standard .fc-toolbar .fc-button, .fc.fc-theme-standard .fc-toolbar .fc-button:disabled{
+    background-color:#0168D9!important;
+    color: #ffffff!important;
+    border: 1px solid #0168D9 !important;
+    opacity:1;
+    text-transform: capitalize;
+}

@@ -1,0 +1,73 @@
+.myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+  
+/* Add some content at the bottom of the video/page */
+.content {
+    position: relative;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 50%;
+    margin: 10% 25%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.signIn, .signUp {
+    text-decoration: none;
+    position: relative;
+    margin-top: 0;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 980px;
+    background: #0071e3;
+    padding: 12px 22px;
+    font-size: 14px;
+    line-height: 1.4285914286;
+    letter-spacing: -0.016em;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    background-color: #fff;
+    color: #1d1d1f !important;
+    cursor: pointer;
+    min-width: 165px;
+    margin-left:20px;
+}
+
+.quoteHeading {
+  font-size: 64px;
+  line-height: 1.0625;
+  font-weight: 700;
+  letter-spacing: -0.009em;
+  font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.typographyBody{
+    font-size: 17px;
+    line-height: 1.4705882353;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: #a1a1a6;
+    margin-top: 12px;
+    margin-bottom: 31px;
+    min-height: 100px;
+    background-color: transparent !important;
+    text-align: center;
+}
+.Logo {
+    font-family: -apple-system, BlinkMacSystemFont, -webkit-system-font, "Malgun Gothic", "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
+    font-feature-settings: "kern";
+    background-color: transparent;
+    text-align: center;
+}
+.LogoMain{
+    background-color: transparent;
+    text-align: center;
+}

@@ -1,0 +1,114 @@
+//Challenge List css
+.sidenav {
+    margin-top: 50px;
+    height: 100%; 
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: var(--body_background) !important;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 30px;
+    padding-left: 10px;
+    a {
+      padding: 6px 8px 6px 8px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #818181;
+      display: block;
+      text-align: center;
+  }
+}
+ 
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Style page content */
+  .main {
+    margin-top: 40px;
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+    margin-bottom: 65px;
+  }
+  .challenge-box {
+    width: 35%;
+    border: 1px solid #a6a1a1;
+    margin: 10px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: var(--body_background) !important;
+    color:var(--body_color) !important;
+  }
+  .fieldLabel {
+    font-weight: 500;
+    font-size: 12px !important;
+    text-transform: uppercase;
+    div {
+      margin: 0px !important;
+      margin-left: 15px !important;
+      padding-bottom: 0 !important;
+        color: #a6a1a1;
+    }
+}
+.col {
+  padding: 2px !important;
+}
+.fieldValue {
+    font-size: 14px !important;
+    div {
+        margin: 0px !important;
+        margin-left: 15px !important;
+        padding-top: 2px !important;
+        color: #ffff;
+    }
+}
+.log-buttons {
+  width: 88%;
+  background: #a6a1a1;
+  border: 1px solid #a6a1a1;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: center;
+}
+
+.private {
+  height: 14px;
+  background-color: #0168D9;
+  border-radius: 10px 10px 0px 0px;
+}
+.group {
+  height: 14px;
+  background-color: rgb(255, 136, 0);
+  border-radius: 10px 10px 0px 0px;
+}
+.public {
+  height: 14px;
+  background-color: #28A745;
+  border-radius: 10px 10px 0px 0px;
+}
+.topics-button {
+  background: #0000;
+  color: #ffff;
+  border: 0.5px solid white;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.inputMargin {
+  margin-bottom: 12px;
+}
+
+.inputMargintop {
+  margin-top: 12px;
+}
+
+.calender{
+  width: 20%;
+  background: #a6a1a1;
+  border: 1px solid #a6a1a1;
+  border-radius: 5px;
+  margin: 4px;
+  text-align: center;
+  padding: 5px;
+}

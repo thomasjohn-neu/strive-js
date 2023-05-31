@@ -1,0 +1,169 @@
+.LogoHeader{
+    margin-left: 20px;
+    margin-bottom: 0px;
+    margin-right: 20px
+}
+
+.body {
+    margin-top: 80px;
+}
+
+.nav-link {
+    color: var(--body_color) !important;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active
+{
+    background-color: #808080;
+}
+.nav-link button{
+    background-color: var(--body_background) !important;
+    color: var(--body_color) !important;
+    border-bottom: 1px solid;
+    border-color:var(--body_color) !important; 
+}
+
+.footer{
+    background-color: var(--body_background) !important;
+}
+
+.footerInner{
+    background-color: var(--body_background) !important;
+}
+
+.navbar-collapse{
+    padding-top: 4px;
+}
+
+.labelBackground{
+    background-color: var(--body_background) !important;
+    color:var(--body_color) !important;
+}
+
+.backgroundBlack{
+    background-color: var(--body_background) !important;
+    color:var(--body_color) !important;
+}
+
+.backgroundBlack:hover{
+    background-color: var(--body_background) !important;
+    color:var(--body_color) !important;
+}
+
+// .dark_mode {
+//     position: relative;
+//     z-index: 1000; /* set a higher value here */
+//     /* other styles */
+//   }
+  
+//   .dark_mode_input {
+//     position: relative;
+//     z-index: 1000; /* set a higher value here */
+//   }
+  
+// /* Hide the input */
+// .dark_mode_input {
+//     display: none;
+//   }
+  
+  /* Set the default styles for the images */
+  .dark_mode_label svg {
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  /* Set the styles for the active image */
+  .dark_mode_input:checked + .dark_mode_label svg:first-of-type {
+    opacity: 1;
+  }
+  
+  /* Set the styles for the inactive image */
+  .dark_mode_input:not(:checked) + .dark_mode_label svg:last-of-type {
+    opacity: 1;
+  }
+  
+.black-and-white {
+    background-color: #fff !important;
+}
+
+// .dark_mode {
+//     margin-top: -20px;
+//     margin-left: 10px;
+// }
+
+.dark_mode_label {
+    width: 65px;
+    height: 30px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 6px;
+    margin-right: 8px;
+}
+.dark_mode_label:after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.dark_mode_input {
+    position: absolute;
+    opacity: 0;
+    width: 70px;
+    height: 45px;
+}
+.dark_mode_input:checked + .dark_mode_label {
+    background: #242424;
+}
+.dark_mode_input:checked + .dark_mode_label:after {
+    left: 62px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+.dark_mode_label:active:after {
+    width: 30px;
+}
+
+.dark_mode_label svg {
+    position: absolute;
+    width: 20px;
+    top: 5px;
+    z-index: 100;
+}
+
+.dark_mode_label svg.sun {
+    left: 5px;
+    fill: #fff;
+    transition: 0.3s;
+}
+.dark_mode_label svg.moon {
+    left: 40px;
+    fill: #7e7e7e;
+    transition: 0.3s;
+}
+.dark_mode_input:checked + .dark_mode_label svg.sun {
+    fill: #7e7e7e;
+}
+.dark_mode_input:checked + .dark_mode_label svg.moon {
+    fill: #fff;
+}
+.dark_mode_input:checked + .dark_mode_label {
+    background: #242424;
+}
+.footer{
+    font-size: 12px;
+}
+
+.p-dataview .p-dataview-content{
+    background-color: var(--body_background) !important;
+    color:var(--body_color) !important;
+}

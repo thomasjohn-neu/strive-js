@@ -1,0 +1,55 @@
+*{
+  transition : all 0.3s ease-in-out;
+}
+
+:root{
+  --body_background: #1F1F1F;
+  --body_color:#fff;
+}
+
+[data-theme="dark"] {
+  --body_background: #FFF;
+  --body_color: #000;
+}
+
+body{
+  font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+  background-color: var(--body_background) !important;
+  color:var(--body_color) !important;
+}
+
+.submit{
+    max-width: 240px;
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    padding: 0px 16px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7D7D7D !important;
+    border-color: #7D7D7D !important;
+}
+
+.navbar{
+  margin:0px;
+  padding:0px !important;
+}
+
+.navbar-brand{
+  margin-right:0px !important;
+}
+
+.card-body{
+  background-color: var(--body_background) !important;
+  color:var(--body_color) !important;
+}
+
+.recharts-responsive-container tspan{
+  background-color: var(--body_background) !important;
+  color:var(--body_color) !important;
+}

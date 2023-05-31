@@ -1,0 +1,95 @@
+.log-box {
+    width: 50%;
+    position: absolute;
+    top: 80px;
+    left: 45%;
+    border: 1px solid #a6a1a1;
+    padding: 15px;
+    border-radius: 10px;
+    max-height: 700px;
+    overflow-y: auto;
+}
+.log {
+    border: 2px solid #a6a1a1;
+    border-radius: 10px;
+    top: 100px;
+    left: 40%;
+    margin: 10px 0px 40px 0px;
+}
+.fieldLabel {
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    div {
+        padding-bottom: 0 !important;
+        color: #a6a1a1;
+    }
+
+}
+.fieldValue {
+    font-size: 18px;
+    div {
+        padding-top: 2px !important;
+        background-color: var(--body_background) !important;
+        color:var(--body_color) !important;
+    }
+    div::first-letter {
+        text-transform: uppercase;
+    }
+}
+.close-button {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    margin-top: 15px;
+    margin-right: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    color: #999;
+    cursor: pointer;
+}
+  
+.close-button:hover {
+    color: #000;
+}
+.views {
+    button {
+        width: 20%;
+        background: #a6a1a1;
+        border: 1px solid #a6a1a1;
+        color:#fff;
+        border-radius: 5px;
+        margin: 4px;
+        text-align: center;
+        padding: 5px;
+    }
+}
+
+.submit{
+    height: 44px;
+    color:#fff;
+}
+
+.fc-dayGridMonth-button, .fc-timeGridWeek-button, .fc-timeGridDay-button{
+    background: #a6a1a1 !important;
+    border: 1px solid #a6a1a1 !important;
+    color:#fff !important;
+    border-radius: 5px;
+    margin: 4px;
+    text-align: center;
+    padding: 5px;
+}
+
+.views{
+    margin-bottom:10px;
+}
+
+.calendar-parent{
+    margin-top:10px;
+}
+
+.inputMargin {
+    margin-bottom: 10px;
+}
